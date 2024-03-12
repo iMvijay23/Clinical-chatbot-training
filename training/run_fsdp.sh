@@ -1,0 +1,20 @@
+accelerate launch --config_file "configs/fsdp_config.yaml"  train.py \
+--model_name "meta-llama/Llama-2-7b-chat-hf" \
+--dataset_name "smangrul/code-chat-assistant-v1" \
+--max_seq_len 2048 \
+--max_steps 1000 \
+--logging_steps 25 \
+--eval_steps 100 \
+--save_steps 500 \
+--bf16 True \
+--packing True \
+--output_dir "full-finetune-llama-chat-asst" \
+--per_device_train_batch_size 1 \
+--gradient_accumulation_steps 2 \
+--dataset_text_field "content" \
+--use_gradient_checkpointing \
+--learning_rate 5e-5  \
+--lr_scheduler_type "cosine" \
+--weight_decay 0.01 \
+--warmup_ratio 0.03 \
+--use_flash_attn True

@@ -1,0 +1,27 @@
+transformers
+accelerate>=0.21.0,<0.23.0
+peft
+deepspeed
+bitsandbytes
+trl
+huggingface-hub
+evaluate
+datasets
+einops
+wandb
+tiktoken
+pandas
+numpy
+scipy
+matplotlib
+joblib
+pyqt5<5.13  # For Spyder compatibility
+pyqtwebengine<5.13  # For Spyder compatibility
+typing-extensions>=4.8.0  # Update to satisfy torch, pydantic-core, pydantic requirements
+urllib3>=1.26.11  # Update for sentry-sdk compatibility
+regex>=2022.1.18  # Update for tiktoken compatibility
+requests>=2.26.0  # Update for tiktoken compatibility
+
+#setuptools
+#wheel
+#packaging
