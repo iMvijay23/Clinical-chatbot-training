@@ -3,7 +3,7 @@
 #SBATCH --job-name=llama2askdocs
 #SBATCH --time=48:00:00
 #SBATCH --partition=a100
-#SBATCH --gres=gpu:2
+#SBATCH --gres=gpu:1
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=12
 #SBATCH --qos=qos_gpu
@@ -12,8 +12,8 @@
 #SBATCH --mail-type END
 #SBATCH --mail-type FAIL
 #SBATCH -A mdredze1_gpu
-#SBATCH --job-name="finetune_askdocs"
-#SBATCH --output="/home/vtiyyal1/askdocs/outputs/finetune_askdocs_latest.out"
+#SBATCH --job-name="llama2chat finetune_askdocs"
+#SBATCH --output="/home/vtiyyal1/askdocs/outputs/llama_finetune_askdocs_latest.out"
 #SBATCH --export=ALL
 
 module load anaconda
@@ -24,11 +24,6 @@ conda info --envs
 conda activate llmtrain_env
 
 
-# Set your Weights & Biases API key
-echo "Setting W&B API key..."
-export WANDB_API_KEY='4315135af756e82c46f65deea0f4019a73660472'
-export HUGGINGFACE_TOKEN='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'
-
 echo "Running python script..."
 
 
@@ -36,7 +31,7 @@ echo "Running python script..."
 #  
 accelerate launch --config_file "configs/deepspeed_config.yaml" train.py \
 --model_name "meta-llama/Llama-2-7b-chat-hf" \
---dataset_name "vtiyyal1/AskDocsEmpathy_4k_it" \
+--dataset_name "vtiyyal1/AskDocsEmpathy_llama2_it" \
 --max_seq_len 2048 \
 --num_train_epochs 2 \
 --max_steps 10000 \
@@ -44,7 +39,7 @@ accelerate launch --config_file "configs/deepspeed_config.yaml" train.py \
 --save_steps 500 \
 --bf16 True \
 --packing True \
---output_dir "/scratch4/mdredze1/vtiyyal1/models/askdocsproject/checkpoints_mar11/llama2chat/" \
+--output_dir "/scratch4/mdredze1/vtiyyal1/models/askdocsproject/checkpoints_mar13/llama2chat/" \
 --per_device_train_batch_size 1 \
 --gradient_accumulation_steps 2 \
 --dataset_text_field "content" \
