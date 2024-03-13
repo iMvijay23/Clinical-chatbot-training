@@ -8,10 +8,7 @@ conda activate llmtrain
 #pip install -r requirements.txt
 
 
-# Set W&B and HuggingFace API keys
-export WANDB_API_KEY='777501c1a468cab3359a9d2ee89293c06605a76e'
-export HUGGINGFACE_TOKEN='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'
-export 'PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:512'
+
 #accelerate config
 # Running the training script
 #accelerate launch --multi_gpu --num_processes 1

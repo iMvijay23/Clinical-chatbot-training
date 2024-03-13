@@ -22,7 +22,7 @@ from utils import *
 from huggingface_hub import HfApi, HfFolder
 import subprocess
 HfFolder.save_token(os.getenv('HUGGINGFACE_TOKEN'))
-api_key='4315135af756e82c46f65deea0f4019a73660472'
+api_key=os.getenv['WANDB']
 wandb.login(key=api_key)
 ########################################################################
 # This is a fully working simple example to use trl's RewardTrainer.

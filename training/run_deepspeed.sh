@@ -18,20 +18,6 @@ module load anaconda
 conda info --envs
 conda activate faiss_2
 
-# init virtual environment if needed
-# conda create -n toy_classification_env python=3.7
-
-#pip install -r requirements.txt # install Python dependencies
-pip install -r requirements.txt
-pip install nvidia-ml-py3
-
-# Set your Weights & Biases API key
-echo "Setting W&B API key..."
-export WANDB_API_KEY='777501c1a468cab3359a9d2ee89293c06605a76e'
-export HUGGINGFACE_TOKEN='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'
-accelerate config
-accelerate env
-# runs your code
 echo "Running python script..."
 
 

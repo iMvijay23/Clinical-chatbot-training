@@ -25,14 +25,6 @@ conda activate trainllm
 
 #added to avoid cuda error 
 
-
-# Set your Weights & Biases API key
-echo "Setting W&B API key..."
-export WANDB_API_KEY='777501c1a468cab3359a9d2ee89293c06605a76e'
-export HUGGINGFACE_TOKEN='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'
-accelerate config
-accelerate env
-# runs your code
 echo "Running python script..."
 
 
