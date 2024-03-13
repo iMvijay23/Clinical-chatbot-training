@@ -22,7 +22,8 @@ from utils import *
 from huggingface_hub import HfApi, HfFolder
 import subprocess
 HfFolder.save_token(os.getenv('HUGGINGFACE_TOKEN'))
-
+api_key=os.getenv['WANDB_API_KEY']
+wandb.login(key=api_key)
 ########################################################################
 # This is a fully working simple example to use trl's RewardTrainer.
 #
@@ -154,7 +155,7 @@ def main(args):
         os.environ.get("ACCELERATE_USE_DEEPSPEED", "False").lower() == "true" and args.use_peft_lora
     )
     save_strategy = "no" if is_deepspeed_peft_enabled else "steps"
-    wandb.init(project="AskDocstop25_march8", entity="vijumuraari")
+    wandb.init(project="AskDocsEmpathy_march13", entity="vijumuraari")
     #code i added
     
     #end
@@ -171,17 +172,17 @@ def main(args):
         warmup_ratio=args.warmup_ratio,
         lr_scheduler_type=args.lr_scheduler_type,
         num_train_epochs=args.num_train_epochs,
-        evaluation_strategy="steps",
+        #evaluation_strategy="steps",
         save_strategy=save_strategy,
         max_steps=args.max_steps,
-        eval_steps=args.eval_steps,
+        #eval_steps=args.eval_steps,
         save_steps=args.save_steps,
         logging_steps=args.logging_steps,
         push_to_hub=args.push_to_hub,
         gradient_checkpointing=args.use_gradient_checkpointing,
         report_to=["wandb"],
         save_total_limit=15, 
-        eval_accumulation_steps=1,
+        #eval_accumulation_steps=1,
     )
 
     # model

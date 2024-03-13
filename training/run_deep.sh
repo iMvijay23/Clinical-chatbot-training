@@ -3,7 +3,7 @@
 #SBATCH --job-name=llama2askdocs
 #SBATCH --time=48:00:00
 #SBATCH --partition=a100
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=12
 #SBATCH --qos=qos_gpu
