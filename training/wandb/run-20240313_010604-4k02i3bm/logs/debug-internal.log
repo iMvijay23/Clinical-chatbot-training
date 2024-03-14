@@ -1,0 +1,189 @@
+2024-03-13 01:06:04,012 INFO    StreamThr :217894 [internal.py:wandb_internal():86] W&B internal server running at pid: 217894, started at: 2024-03-13 01:06:04.012408
+2024-03-13 01:06:04,013 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: status
+2024-03-13 01:06:04,021 INFO    WriterThread:217894 [datastore.py:open_for_write():87] open: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/run-4k02i3bm.wandb
+2024-03-13 01:06:04,021 DEBUG   SenderThread:217894 [sender.py:send():378] send: header
+2024-03-13 01:06:04,045 DEBUG   SenderThread:217894 [sender.py:send():378] send: run
+2024-03-13 01:06:04,256 INFO    SenderThread:217894 [dir_watcher.py:__init__():211] watching files in: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files
+2024-03-13 01:06:04,256 INFO    SenderThread:217894 [sender.py:_start_run_threads():1099] run started: 4k02i3bm with start time 1710306364.013398
+2024-03-13 01:06:04,264 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: check_version
+2024-03-13 01:06:04,264 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: check_version
+2024-03-13 01:06:04,330 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: run_start
+2024-03-13 01:06:04,335 DEBUG   HandlerThread:217894 [system_info.py:__init__():26] System info init
+2024-03-13 01:06:04,335 DEBUG   HandlerThread:217894 [system_info.py:__init__():41] System info init done
+2024-03-13 01:06:04,335 INFO    HandlerThread:217894 [system_monitor.py:start():194] Starting system monitor
+2024-03-13 01:06:04,335 INFO    SystemMonitor:217894 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-13 01:06:04,336 INFO    HandlerThread:217894 [system_monitor.py:probe():214] Collecting system info
+2024-03-13 01:06:04,336 INFO    SystemMonitor:217894 [interfaces.py:start():190] Started cpu monitoring
+2024-03-13 01:06:04,336 INFO    SystemMonitor:217894 [interfaces.py:start():190] Started disk monitoring
+2024-03-13 01:06:04,337 INFO    SystemMonitor:217894 [interfaces.py:start():190] Started gpu monitoring
+2024-03-13 01:06:04,337 INFO    SystemMonitor:217894 [interfaces.py:start():190] Started memory monitoring
+2024-03-13 01:06:04,338 INFO    SystemMonitor:217894 [interfaces.py:start():190] Started network monitoring
+2024-03-13 01:06:04,368 DEBUG   HandlerThread:217894 [system_info.py:probe():150] Probing system
+2024-03-13 01:06:04,372 DEBUG   HandlerThread:217894 [system_info.py:_probe_git():135] Probing git
+2024-03-13 01:06:04,391 DEBUG   HandlerThread:217894 [system_info.py:_probe_git():143] Probing git done
+2024-03-13 01:06:04,391 DEBUG   HandlerThread:217894 [system_info.py:probe():198] Probing system done
+2024-03-13 01:06:04,391 DEBUG   HandlerThread:217894 [system_monitor.py:probe():223] {'os': 'Linux-4.18.0-477.21.1.el8_8.x86_64-x86_64-with-glibc2.17', 'python': '3.8.18', 'heartbeatAt': '2024-03-13T05:06:04.368847', 'startedAt': '2024-03-13T05:06:04.003819', 'docker': None, 'cuda': None, 'args': ('--model_name', 'google/gemma-7b-it', '--dataset_name', 'vtiyyal1/AskDocsEmpathy_gemma_it', '--max_seq_len', '2048', '--num_train_epochs', '2', '--max_steps', '10000', '--logging_steps', '25', '--save_steps', '500', '--bf16', 'True', '--packing', 'True', '--output_dir', '/scratch4/mdredze1/vtiyyal1/models/askdocsproject/checkpoints_mar13/gemma-it/', '--per_device_train_batch_size', '1', '--gradient_accumulation_steps', '2', '--dataset_text_field', 'content', '--use_gradient_checkpointing', '--use_peft_lora', 'True', '--use_8bit_qunatization', 'False', '--learning_rate', '5e-5', '--lr_scheduler_type', 'cosine', '--weight_decay', '0.01', '--warmup_ratio', '0.03', '--optim', 'paged_adamw_8bit', '--use_flash_attn', 'True'), 'state': 'running', 'program': 'train.py', 'codePathLocal': 'train.py', 'codePath': 'training/train.py', 'git': {'remote': 'https://github.com/iMvijay23/Clinical-chatbot-training.git', 'commit': 'a3535c12fd2a98a4ad7775c82c934049009f91a5'}, 'email': 'vijaymurari.tiyyala@gmail.com', 'root': '/home/vtiyyal1/askdocs/Clinical-chatbot-training', 'host': 'gpu17', 'username': 'vtiyyal1', 'executable': '/home/vtiyyal1/.conda/envs/llmtrain_env/bin/python', 'cpu_count': 48, 'cpu_count_logical': 48, 'cpu_freq': {'current': 3024.9997083333333, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3600.003, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3600.001, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}, {'current': 3000.0, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 19.990234375, 'used': 8.892864227294922}}, 'gpu': 'NVIDIA A100-PCIE-40GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA A100-PCIE-40GB', 'memory_total': 42949672960}], 'memory': {'total': 188.57080841064453}}
+2024-03-13 01:06:04,391 INFO    HandlerThread:217894 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-13 01:06:04,391 INFO    HandlerThread:217894 [system_monitor.py:probe():227] Publishing system info
+2024-03-13 01:06:04,391 DEBUG   HandlerThread:217894 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-03-13 01:06:05,258 INFO    Thread-12 :217894 [dir_watcher.py:_on_file_created():271] file/dir created: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/conda-environment.yaml
+2024-03-13 01:06:05,699 DEBUG   HandlerThread:217894 [system_info.py:_save_conda():219] Saving conda packages done
+2024-03-13 01:06:05,700 INFO    HandlerThread:217894 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-13 01:06:05,703 DEBUG   SenderThread:217894 [sender.py:send():378] send: files
+2024-03-13 01:06:05,703 INFO    SenderThread:217894 [sender.py:_save_file():1365] saving file wandb-metadata.json with policy now
+2024-03-13 01:06:05,851 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: python_packages
+2024-03-13 01:06:05,852 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: python_packages
+2024-03-13 01:06:05,852 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 01:06:05,852 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 01:06:05,855 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 01:06:05,966 INFO    wandb-upload_0:217894 [upload_job.py:push():131] Uploaded file /tmp/tmp_d48tqd3wandb/4xkphqi4-wandb-metadata.json
+2024-03-13 01:06:06,004 DEBUG   SenderThread:217894 [sender.py:send():378] send: telemetry
+2024-03-13 01:06:06,007 DEBUG   SenderThread:217894 [sender.py:send():378] send: exit
+2024-03-13 01:06:06,007 INFO    SenderThread:217894 [sender.py:send_exit():585] handling exit code: 1
+2024-03-13 01:06:06,007 INFO    SenderThread:217894 [sender.py:send_exit():587] handling runtime: 1
+2024-03-13 01:06:06,007 INFO    SenderThread:217894 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-13 01:06:06,007 INFO    SenderThread:217894 [sender.py:send_exit():593] send defer
+2024-03-13 01:06:06,007 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:06,008 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 0
+2024-03-13 01:06:06,008 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:06,008 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-03-13 01:06:06,008 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 1
+2024-03-13 01:06:06,008 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:06,008 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 1
+2024-03-13 01:06:06,008 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:06,008 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-03-13 01:06:06,008 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 2
+2024-03-13 01:06:06,008 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:06,008 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 2
+2024-03-13 01:06:06,008 INFO    HandlerThread:217894 [system_monitor.py:finish():203] Stopping system monitor
+2024-03-13 01:06:06,008 DEBUG   SystemMonitor:217894 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-03-13 01:06:06,009 INFO    HandlerThread:217894 [interfaces.py:finish():202] Joined cpu monitor
+2024-03-13 01:06:06,009 DEBUG   SystemMonitor:217894 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-03-13 01:06:06,009 INFO    HandlerThread:217894 [interfaces.py:finish():202] Joined disk monitor
+2024-03-13 01:06:06,009 DEBUG   SystemMonitor:217894 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-03-13 01:06:06,058 INFO    HandlerThread:217894 [interfaces.py:finish():202] Joined gpu monitor
+2024-03-13 01:06:06,059 INFO    HandlerThread:217894 [interfaces.py:finish():202] Joined memory monitor
+2024-03-13 01:06:06,059 INFO    HandlerThread:217894 [interfaces.py:finish():202] Joined network monitor
+2024-03-13 01:06:06,059 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:06,059 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-03-13 01:06:06,059 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 3
+2024-03-13 01:06:06,059 DEBUG   SenderThread:217894 [sender.py:send():378] send: stats
+2024-03-13 01:06:06,059 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:06,059 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 3
+2024-03-13 01:06:06,059 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:06,060 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-03-13 01:06:06,060 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 4
+2024-03-13 01:06:06,060 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:06,060 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 4
+2024-03-13 01:06:06,060 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:06,060 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-03-13 01:06:06,060 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 5
+2024-03-13 01:06:06,060 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:06,060 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 5
+2024-03-13 01:06:06,060 DEBUG   SenderThread:217894 [sender.py:send():378] send: summary
+2024-03-13 01:06:06,061 INFO    SenderThread:217894 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-13 01:06:06,061 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:06,061 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-03-13 01:06:06,061 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 6
+2024-03-13 01:06:06,061 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:06,061 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 6
+2024-03-13 01:06:06,061 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:06,061 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-03-13 01:06:06,065 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 01:06:06,118 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 7
+2024-03-13 01:06:06,118 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:06,118 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 7
+2024-03-13 01:06:06,118 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:06,118 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-03-13 01:06:06,257 INFO    Thread-12 :217894 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/config.yaml
+2024-03-13 01:06:06,257 INFO    Thread-12 :217894 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/conda-environment.yaml
+2024-03-13 01:06:06,257 INFO    Thread-12 :217894 [dir_watcher.py:_on_file_created():271] file/dir created: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/output.log
+2024-03-13 01:06:06,257 INFO    Thread-12 :217894 [dir_watcher.py:_on_file_created():271] file/dir created: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/wandb-summary.json
+2024-03-13 01:06:06,257 INFO    Thread-12 :217894 [dir_watcher.py:_on_file_created():271] file/dir created: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/wandb-metadata.json
+2024-03-13 01:06:06,257 INFO    Thread-12 :217894 [dir_watcher.py:_on_file_created():271] file/dir created: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/requirements.txt
+2024-03-13 01:06:07,007 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-13 01:06:08,012 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 8
+2024-03-13 01:06:08,012 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: poll_exit
+2024-03-13 01:06:08,012 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:08,012 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 8
+2024-03-13 01:06:08,012 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:08,012 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-03-13 01:06:08,012 INFO    SenderThread:217894 [job_builder.py:build():298] Attempting to build job artifact
+2024-03-13 01:06:08,013 INFO    SenderThread:217894 [job_builder.py:_get_source_type():428] is repo sourced job
+2024-03-13 01:06:08,036 INFO    SenderThread:217894 [job_builder.py:build():404] adding wandb-job metadata file
+2024-03-13 01:06:08,040 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 9
+2024-03-13 01:06:08,040 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:08,040 DEBUG   SenderThread:217894 [sender.py:send():378] send: artifact
+2024-03-13 01:06:08,040 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 9
+2024-03-13 01:06:08,258 INFO    Thread-12 :217894 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/output.log
+2024-03-13 01:06:08,323 INFO    SenderThread:217894 [sender.py:send_artifact():1443] sent artifact job-https___github.com_iMvijay23_Clinical-chatbot-training.git_training_train.py - {'id': 'QXJ0aWZhY3Q6NzUzOTM2NzAy', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE0ODI2NzA3Nw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NzUzOTM2NzAy', 'versionIndex': 0}}}
+2024-03-13 01:06:08,323 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:08,323 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-03-13 01:06:08,323 INFO    SenderThread:217894 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-03-13 01:06:09,007 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-13 01:06:09,258 INFO    SenderThread:217894 [dir_watcher.py:finish():388] scan: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files
+2024-03-13 01:06:09,258 INFO    SenderThread:217894 [dir_watcher.py:finish():402] scan save: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/wandb-metadata.json wandb-metadata.json
+2024-03-13 01:06:09,258 INFO    SenderThread:217894 [dir_watcher.py:finish():402] scan save: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/config.yaml config.yaml
+2024-03-13 01:06:09,259 INFO    SenderThread:217894 [dir_watcher.py:finish():402] scan save: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/wandb-summary.json wandb-summary.json
+2024-03-13 01:06:09,261 INFO    SenderThread:217894 [dir_watcher.py:finish():402] scan save: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/conda-environment.yaml conda-environment.yaml
+2024-03-13 01:06:09,262 INFO    SenderThread:217894 [dir_watcher.py:finish():402] scan save: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/output.log output.log
+2024-03-13 01:06:09,262 INFO    SenderThread:217894 [dir_watcher.py:finish():402] scan save: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/requirements.txt requirements.txt
+2024-03-13 01:06:09,268 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 10
+2024-03-13 01:06:09,268 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: poll_exit
+2024-03-13 01:06:09,269 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:09,269 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 10
+2024-03-13 01:06:09,271 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:09,271 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-03-13 01:06:09,271 INFO    SenderThread:217894 [file_pusher.py:finish():172] shutting down file pusher
+2024-03-13 01:06:09,430 INFO    wandb-upload_0:217894 [upload_job.py:push():131] Uploaded file /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/config.yaml
+2024-03-13 01:06:09,562 INFO    wandb-upload_4:217894 [upload_job.py:push():131] Uploaded file /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/requirements.txt
+2024-03-13 01:06:09,606 INFO    wandb-upload_1:217894 [upload_job.py:push():131] Uploaded file /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/wandb-summary.json
+2024-03-13 01:06:10,008 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-13 01:06:10,008 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: poll_exit
+2024-03-13 01:06:10,678 INFO    wandb-upload_2:217894 [upload_job.py:push():131] Uploaded file /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/conda-environment.yaml
+2024-03-13 01:06:10,696 INFO    wandb-upload_3:217894 [upload_job.py:push():131] Uploaded file /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/files/output.log
+2024-03-13 01:06:10,897 INFO    Thread-11 :217894 [sender.py:transition_state():613] send defer: 11
+2024-03-13 01:06:10,897 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:10,897 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 11
+2024-03-13 01:06:10,897 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:10,897 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-03-13 01:06:10,897 INFO    SenderThread:217894 [file_pusher.py:join():178] waiting for file pusher
+2024-03-13 01:06:10,897 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 12
+2024-03-13 01:06:10,897 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:10,897 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 12
+2024-03-13 01:06:10,897 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:10,897 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-03-13 01:06:10,897 INFO    SenderThread:217894 [file_stream.py:finish():595] file stream finish called
+2024-03-13 01:06:10,949 INFO    SenderThread:217894 [file_stream.py:finish():599] file stream finish is done
+2024-03-13 01:06:10,949 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 13
+2024-03-13 01:06:10,949 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:10,949 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 13
+2024-03-13 01:06:10,949 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:10,949 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-03-13 01:06:10,949 INFO    SenderThread:217894 [sender.py:transition_state():613] send defer: 14
+2024-03-13 01:06:10,949 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: defer
+2024-03-13 01:06:10,949 INFO    HandlerThread:217894 [handler.py:handle_request_defer():172] handle defer: 14
+2024-03-13 01:06:10,949 DEBUG   SenderThread:217894 [sender.py:send():378] send: final
+2024-03-13 01:06:10,949 DEBUG   SenderThread:217894 [sender.py:send():378] send: footer
+2024-03-13 01:06:10,949 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: defer
+2024-03-13 01:06:10,949 INFO    SenderThread:217894 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-03-13 01:06:10,950 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-13 01:06:10,950 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: poll_exit
+2024-03-13 01:06:10,950 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-13 01:06:10,950 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: poll_exit
+2024-03-13 01:06:10,950 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: server_info
+2024-03-13 01:06:10,950 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: server_info
+2024-03-13 01:06:10,952 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: get_summary
+2024-03-13 01:06:10,953 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: sampled_history
+2024-03-13 01:06:10,953 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 01:06:10,953 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: job_info
+2024-03-13 01:06:10,994 DEBUG   SenderThread:217894 [sender.py:send_request():405] send_request: job_info
+2024-03-13 01:06:10,994 INFO    MainThread:217894 [wandb_run.py:_footer_history_summary_info():3851] rendering history
+2024-03-13 01:06:10,994 INFO    MainThread:217894 [wandb_run.py:_footer_history_summary_info():3883] rendering summary
+2024-03-13 01:06:10,994 INFO    MainThread:217894 [wandb_run.py:_footer_sync_info():3810] logging synced files
+2024-03-13 01:06:10,994 DEBUG   HandlerThread:217894 [handler.py:handle_request():146] handle_request: shutdown
+2024-03-13 01:06:10,994 INFO    HandlerThread:217894 [handler.py:finish():869] shutting down handler
+2024-03-13 01:06:11,953 INFO    WriterThread:217894 [datastore.py:close():296] close: /home/vtiyyal1/askdocs/Clinical-chatbot-training/training/wandb/run-20240313_010604-4k02i3bm/run-4k02i3bm.wandb
+2024-03-13 01:06:11,994 INFO    SenderThread:217894 [sender.py:finish():1521] shutting down sender
+2024-03-13 01:06:11,994 INFO    SenderThread:217894 [file_pusher.py:finish():172] shutting down file pusher
+2024-03-13 01:06:11,994 INFO    SenderThread:217894 [file_pusher.py:join():178] waiting for file pusher

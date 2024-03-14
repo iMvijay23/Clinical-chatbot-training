@@ -12,8 +12,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from dataclasses import dataclass, field
+
 import os
+os.environ['HF_HOME'] = '/scratch4/mdredze1/vtiyyal1/huggingface_cache/'
+from dataclasses import dataclass, field
 import subprocess
 from typing import Optional
 import wandb
@@ -22,8 +24,9 @@ from utils import *
 from huggingface_hub import HfApi, HfFolder
 import subprocess
 HfFolder.save_token(os.getenv('HUGGINGFACE_TOKEN'))
-api_key=os.getenv['WANDB_API_KEY']
-wandb.login(key=api_key)
+
+
+
 ########################################################################
 # This is a fully working simple example to use trl's RewardTrainer.
 #

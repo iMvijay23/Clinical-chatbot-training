@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "train.py", line 255, in <module>
+    main(args)
+  File "train.py", line 191, in main
+    model, peft_config, tokenizer = create_and_prepare_model(args)
+  File "/home/vtiyyal1/askdocs/Clinical-chatbot-training/training/utils.py", line 204, in create_and_prepare_model
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/vtiyyal1/.local/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 482, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/home/vtiyyal1/.local/lib/python3.8/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/home/vtiyyal1/.local/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/vtiyyal1/.local/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1419, in hf_hub_download
+    os.makedirs(os.path.dirname(pointer_path), exist_ok=True)
+  File "/home/vtiyyal1/.conda/envs/llmtrain_env/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/scratch4/mdredze1/huggingface_cache/models--meta-llama--Llama-2-7b-chat-hf/snapshots/09bd0f49e16738cdfaa6e615203e126038736eb0'
