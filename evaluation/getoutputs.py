@@ -47,7 +47,7 @@ def run_inference_and_save(model, tokenizer, data, output_path):
         inputs = tokenizer(text, return_tensors='pt').to(model.device)
 
         with torch.no_grad():
-            outputs = model.generate(**inputs, max_new_tokens=256)
+            outputs = model.generate(**inputs, max_new_tokens=512)
 
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
         item['ft_model_response'] = response

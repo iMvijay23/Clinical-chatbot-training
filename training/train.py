@@ -158,7 +158,7 @@ def main(args):
         os.environ.get("ACCELERATE_USE_DEEPSPEED", "False").lower() == "true" and args.use_peft_lora
     )
     save_strategy = "no" if is_deepspeed_peft_enabled else "steps"
-    wandb.init(project="AskDocsEmpathy_march13", entity="vijumuraari")
+    wandb.init(project="AskDocsEmpathy_apr3", entity="vijumuraari")
     #code i added
     
     #end
@@ -184,7 +184,7 @@ def main(args):
         push_to_hub=args.push_to_hub,
         gradient_checkpointing=args.use_gradient_checkpointing,
         report_to=["wandb"],
-        save_total_limit=15, 
+        save_total_limit=30, 
         #eval_accumulation_steps=1,
     )
 

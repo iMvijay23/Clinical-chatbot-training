@@ -13,6 +13,7 @@ import numpy as np
 parser = argparse.ArgumentParser(description="Run inference using the base model")
 parser.add_argument("--model_path", type=str, required=True, help="Path to the base model")
 parser.add_argument("--data_dir", type=str, required=True, help="Base dir for data")
+parser.add_argument("--output_dir", type=str, required=True, help="Dir for saving outputs")
 args = parser.parse_args()
 
 # Set the evaluation dataset path
@@ -57,8 +58,19 @@ with open(EVAL_DATASET_PATH, 'r') as f:
 # Load the base model
 model, tokenizer = load_model(args.model_path)
 
-# Define the output path for the processed data
-output_path = os.path.join(args.data_dir, 'processed_test_data_outputs_base.json')
+# Define the output directory and file name for the processed data
+output_dir = args.output_dir
+model_name = args.model_path.split('/')[-1]  # Extract model name from the model path for cleaner file naming
+file_name = f'outputs_test_data_{model_name}_base.json'
+output_path = os.path.join(output_dir, file_name)
+
+# Check if the output directory exists, create it if not
+if not os.path.exists(output_dir):
+    print(f"Output directory {output_dir} does not exist. Creating it...")
+    os.makedirs(output_dir)
+
+# Print the output path
+print(f"The output will be saved to: {output_path}")
 
 # Run inference and save the results
 run_inference_and_save(model, tokenizer, data, output_path)
